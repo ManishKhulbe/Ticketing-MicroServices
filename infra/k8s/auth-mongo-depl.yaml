@@ -8,7 +8,7 @@ spec:
     matchLabels:
       app: auth-mongo
   template:
-    metaData:
+    metadata:
       labels:
         app: auth-mongo  ## this is the name which apply to the pod
     spec:

@@ -10,10 +10,17 @@ spec:
     - host: ticketing.dev
       http:
         paths:
-          - path: /api/users/?(.*)
+          - path: /api/users/?(.*) ## ingress start watching path from top to bottom so place client at very bottom 
             pathType: Prefix
             backend:
               service:
                 name: auth-srv
                 port:
                   number: 3000
+          - path: /?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: client-srv
+                port:
+                  number: 3000        

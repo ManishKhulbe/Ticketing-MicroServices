@@ -1,4 +1,4 @@
-import { currentUser } from './../middlewares/current-user';
+import { currentUser } from '@manishtickets/common';
 import express from 'express'
 
 const router = express.Router()

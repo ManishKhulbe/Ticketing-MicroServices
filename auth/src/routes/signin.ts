@@ -1,7 +1,6 @@
 import { Password } from './../services/password';
-import { BadRequestError } from './../errors/bad-request-error';
+import { BadRequestError, validateRequest } from '@manishtickets/common';
 
-import { validateRequest } from './../middlewares/validate-request';
 import express, { Request, Response } from "express";
 import { body } from "express-validator";
 import { User } from '../models/user';

@@ -75,8 +75,6 @@ it("returns a 400 if the user provides an invalid title or price", async () => {
 
 });
 
-
-
 it("updates the ticket provided valid inputs", async () => {
     const cookie = global.signin()
     const response = await request(app)
